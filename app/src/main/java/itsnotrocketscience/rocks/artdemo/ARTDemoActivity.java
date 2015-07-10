@@ -10,6 +10,7 @@ import org.artoolkit.ar.base.rendering.ARRenderer;
  * Created by Liam on 10/07/2015.
  */
 public class ARTDemoActivity extends ARActivity{
+    private DemoRenderer renderer  = new DemoRenderer();
 
     private FrameLayout frameLayout;
     @Override
@@ -17,12 +18,11 @@ public class ARTDemoActivity extends ARActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo);
         frameLayout = (FrameLayout)this.findViewById(R.id.frameLayout);
-
     }
 
     @Override
     protected ARRenderer supplyRenderer() {
-        return null;
+        return renderer;
     }
 
     @Override
