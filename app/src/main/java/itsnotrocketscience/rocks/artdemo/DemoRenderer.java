@@ -24,7 +24,7 @@ public class DemoRenderer extends ARRenderer{
     @Override
     public boolean configureARScene() {
 
-        markerID = ARToolKit.getInstance().addMarker("single;Data/patt.hiro;80");
+        markerID = ARToolKit.getInstance().addMarker("single;Data/alien.pat;80");
         if (markerID < 0) return false;
 
         return true;
@@ -60,8 +60,6 @@ public class DemoRenderer extends ARRenderer{
 
             if (spinning) angle += 5.0f;
         }
-
-
     }
 
 }
