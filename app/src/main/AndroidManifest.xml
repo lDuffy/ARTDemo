@@ -42,6 +42,16 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/demo">
         </activity>
+        <activity
+            android:name=".ARTDemoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/demo">
+        </activity>
+        <activity
+            android:name=".sphere.SphereActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/demo">
+        </activity>
         <activity android:name="org.artoolkit.ar.base.camera.CameraPreferencesActivity"/>
     </application>
 

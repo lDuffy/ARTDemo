@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import itsnotrocketscience.rocks.artdemo.square.OpenGLES20Activity;
+import itsnotrocketscience.rocks.artdemo.sphere.SphereActivity;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener  {
@@ -17,14 +17,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         Button btnDemo = (Button)findViewById(R.id.btnDemo);
         btnDemo.setOnClickListener(this);
+        Button btnExample = (Button)findViewById(R.id.btnExample);
+        btnExample.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.btnDemo:
-                Intent intent = new Intent(MainActivity.this, OpenGLES20Activity.class);
+                Intent intent = new Intent(MainActivity.this, ARTDemoActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.btnExample:
+                Intent intent1 = new Intent(MainActivity.this, SphereActivity.class);
+                startActivity(intent1);
                 break;
         }
     }
