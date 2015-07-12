@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import itsnotrocketscience.rocks.artdemo.cube.ARSimpleInteraction;
 import itsnotrocketscience.rocks.artdemo.sphere.SphereActivity;
 
 
@@ -19,18 +20,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnDemo.setOnClickListener(this);
         Button btnExample = (Button)findViewById(R.id.btnExample);
         btnExample.setOnClickListener(this);
+        Button btnCube = (Button)findViewById(R.id.btnCube);
+        btnCube.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
+        Intent intent;
         switch(v.getId()){
             case R.id.btnDemo:
-                Intent intent = new Intent(MainActivity.this, ARTDemoActivity.class);
+                intent = new Intent(MainActivity.this, ARTDemoActivity.class);
                 startActivity(intent);
                 break;
             case R.id.btnExample:
-                Intent intent1 = new Intent(MainActivity.this, SphereActivity.class);
-                startActivity(intent1);
+                intent = new Intent(MainActivity.this, SphereActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btnCube:
+                intent = new Intent(MainActivity.this, ARSimpleInteraction.class);
+                startActivity(intent);
                 break;
         }
     }
