@@ -38,7 +38,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="itsnotrocketscience.rocks.artdemo.ARTDemoActivity"
+            android:name=".square.OpenGLES20Activity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/demo">
         </activity>

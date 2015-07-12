@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import itsnotrocketscience.rocks.artdemo.square.OpenGLES20Activity;
+
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener  {
 
@@ -21,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.btnDemo:
-                Intent intent = new Intent(MainActivity.this, ARTDemoActivity.class);
+                Intent intent = new Intent(MainActivity.this, OpenGLES20Activity.class);
                 startActivity(intent);
                 break;
         }
