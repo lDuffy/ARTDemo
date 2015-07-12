@@ -4,4 +4,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="demo">ARTDemo</string>
+    <string name="open">Open</string>
+    <string name="example">Example</string>
+    <string name="cube">Cube</string>
 </resources>
