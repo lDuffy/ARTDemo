@@ -9,7 +9,6 @@ import java.nio.FloatBuffer;
 
 import javax.microedition.khronos.opengles.GL10;
 
-// Calculation of spherical vertex
 public class Sphere {
 
     public void draw(GL10 gl) {
@@ -30,6 +29,7 @@ public class Sphere {
         gl.glEnableClientState(GL10.GL_VERTEX_ARRAY);
         gl.glEnableClientState(GL10.GL_NORMAL_ARRAY);
 
+        // Calculation of spherical vertex
         for (angleA = -90.0f; angleA <90.0f; angleA += step) {
             int	n = 0;
 
