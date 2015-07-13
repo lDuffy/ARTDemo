@@ -12,20 +12,17 @@ import javax.microedition.khronos.opengles.GL10;
 
 public class OpenGLRenderer4 implements Renderer {
 
-    private final float[] mat_ambient = {0.8f, 1.2f, 0.8f, 4.0f};
+    private final float[] mat_ambient = { 0.2f, 0.3f, 0.4f, 1.0f };
     private FloatBuffer mat_ambient_buf;
     // Parallel incident light
-    private final float[] mat_diffuse = {1.6f, 2.4f, 2.6f, 4.0f};
+    private final float[] mat_diffuse = { 0.4f, 0.6f, 0.8f, 1.0f };
     private FloatBuffer mat_diffuse_buf;
     // The highlighted area
-    private final float[] mat_specular = {0.86f * 1.6f, 0.8f * 1.2f, 0.8f * 1.6f, 3.0f};
+    private final float[] mat_specular = { 0.2f * 0.4f, 0.2f * 0.6f, 0.2f * 0.8f, 1.0f };
     private FloatBuffer mat_specular_buf;
+    private float angle = 0.0f;
 
     private Sphere mSphere = new Sphere();
-
-    public volatile float mLightX = 10f;
-    public volatile float mLightY = 10f;
-    public volatile float mLightZ = 10f;
 
     @Override
     public void onDrawFrame(GL10 gl) {
@@ -43,18 +40,10 @@ public class OpenGLRenderer4 implements Renderer {
         gl.glMaterialfv(GL10.GL_FRONT_AND_BACK, GL10.GL_SPECULAR, mat_specular_buf);
         // Specular exponent 0~128 less rough
         gl.glMaterialf(GL10.GL_FRONT_AND_BACK, GL10.GL_SHININESS, 96.0f);
-
-        //The position of the light source
-        float[] light_position = {mLightX, mLightY, mLightZ, 0.0f};
-        ByteBuffer mpbb = ByteBuffer.allocateDirect(light_position.length * 4);
-        mpbb.order(ByteOrder.nativeOrder());
-        FloatBuffer mat_posiBuf = mpbb.asFloatBuffer();
-        mat_posiBuf.put(light_position);
-        mat_posiBuf.position(0);
-        gl.glLightfv(GL10.GL_LIGHT0, GL10.GL_POSITION, mat_posiBuf);
-
         gl.glTranslatef(0.0f, 0.0f, -3.0f);
+        gl.glRotatef(angle, 0.0f, 0.0f, 1.0f);
         mSphere.draw(gl);
+        angle += 5.0f;
     }
 
     @Override
