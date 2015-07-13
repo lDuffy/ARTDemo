@@ -31,16 +31,12 @@ public class DemoRenderer extends ARRenderer {
 
     private Sphere mSphere = new Sphere();
 
-    public volatile float mLightX = 10f;
-    public volatile float mLightY = 10f;
-    public volatile float mLightZ = 10f;
-
     private int markerID = -1;
 
     private float angle = 0.0f;
 
     /**
-     * By overriding {@link configureARScene}, the markers and other settings can be configured
+     * By overriding configureARScene, the markers and other settings can be configured
      * after the native library is initialised, but prior to the rendering actually starting.
      */
     @Override
@@ -79,18 +75,6 @@ public class DemoRenderer extends ARRenderer {
         // Specular exponent 0~128 less rough
         gl.glMaterialf(GL10.GL_FRONT_AND_BACK, GL10.GL_SHININESS, 96.0f);
 
-        //The position of the light source
-        float[] light_position = {mLightX, mLightY, mLightZ, 0.0f};
-
-        ByteBuffer mpbb = ByteBuffer.allocateDirect(light_position.length * 4);
-        mpbb.order(ByteOrder.nativeOrder());
-
-        FloatBuffer mat_posiBuf = mpbb.asFloatBuffer();
-        mat_posiBuf.put(light_position);
-        mat_posiBuf.position(0);
-
-        gl.glLightfv(GL10.GL_LIGHT0, GL10.GL_POSITION, mat_posiBuf);
-
         if (ARToolKit.getInstance().queryMarkerVisible(markerID)) {
 
             gl.glLoadMatrixf(ARToolKit.getInstance().queryMarkerTransformation(markerID), 0);
@@ -98,7 +82,7 @@ public class DemoRenderer extends ARRenderer {
             gl.glPushMatrix();
             gl.glRotatef(angle, 0.0f, 0.0f, 1.0f);
             gl.glTranslatef(0.0f, 0.0f, -3.0f);
-            gl.glScalef(9.f, 9.f, 9.f);
+            gl.glScalef(10.f, 10.f, 10.f);
             mSphere.draw(gl);
             angle += 5.0f;
             gl.glPopMatrix();
