@@ -68,8 +68,6 @@ public class OpenGLRenderer4 implements Renderer {
         gl.glMatrixMode(GL10.GL_PROJECTION);
         // Reset the projection matrix
         gl.glLoadIdentity();
-        // Set the viewport size
-        // gl.glFrustumf(0, width, 0, height, 0.1f, 100.0f);
 
         GLU.gluPerspective(gl, 90.0f, (float) width / height, 0.1f, 50.0f);
 
