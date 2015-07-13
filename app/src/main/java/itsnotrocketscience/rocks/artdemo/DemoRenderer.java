@@ -44,11 +44,14 @@ public class DemoRenderer extends ARRenderer {
 
         markerID = ARToolKit.getInstance().addMarker("single;Data/alien.pat;80");
         if (markerID < 0) return false;
-
         return true;
 
     }
 
+    /**
+     * @param gl
+     * draws object to screen if within bounds of marker
+     */
     public void draw(GL10 gl) {
 
         gl.glClear(GL10.GL_COLOR_BUFFER_BIT | GL10.GL_DEPTH_BUFFER_BIT);
@@ -130,6 +133,10 @@ public class DemoRenderer extends ARRenderer {
         initBuffers();
     }
 
+
+    /**
+     * sets buffers for lighting
+     */
     private void initBuffers() {
         ByteBuffer bufTemp = ByteBuffer.allocateDirect(mat_ambient.length * 4);
         bufTemp.order(ByteOrder.nativeOrder());
