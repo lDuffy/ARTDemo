@@ -12,14 +12,13 @@ import javax.microedition.khronos.opengles.GL10;
 
 public class OpenGLRenderer4 implements Renderer {
 
-    // Ambient light
-    private final float[] mat_ambient = { 0.2f, 0.3f, 0.4f, 1.0f };
+    private final float[] mat_ambient = {0.8f, 1.2f, 0.8f, 4.0f};
     private FloatBuffer mat_ambient_buf;
     // Parallel incident light
-    private final float[] mat_diffuse = { 0.4f, 0.6f, 0.8f, 1.0f };
+    private final float[] mat_diffuse = {1.6f, 2.4f, 2.6f, 4.0f};
     private FloatBuffer mat_diffuse_buf;
     // The highlighted area
-    private final float[] mat_specular = { 0.2f * 0.4f, 0.2f * 0.6f, 0.2f * 0.8f, 1.0f };
+    private final float[] mat_specular = {0.86f * 1.6f, 0.8f * 1.2f, 0.8f * 1.6f, 3.0f};
     private FloatBuffer mat_specular_buf;
 
     private Sphere mSphere = new Sphere();
