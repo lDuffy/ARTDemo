@@ -9,6 +9,10 @@ import java.nio.FloatBuffer;
 
 import javax.microedition.khronos.opengles.GL10;
 
+/**
+ * code for this class was taken from the following demo
+ * http://www.programering.com/a/MDM3cjNwATU.html
+ */
 public class Sphere {
 
     public void draw(GL10 gl) {

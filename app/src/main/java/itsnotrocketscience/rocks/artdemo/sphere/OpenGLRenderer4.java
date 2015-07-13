@@ -10,6 +10,11 @@ import java.nio.FloatBuffer;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
+
+/**
+ * code for this class was taken from the following demo
+ * http://www.programering.com/a/MDM3cjNwATU.html
+ */
 public class OpenGLRenderer4 implements Renderer {
 
     private final float[] mat_ambient = { 0.2f, 0.3f, 0.4f, 1.0f };
@@ -43,7 +48,7 @@ public class OpenGLRenderer4 implements Renderer {
         gl.glTranslatef(0.0f, 0.0f, -3.0f);
         gl.glRotatef(angle, 0.0f, 0.0f, 1.0f);
         mSphere.draw(gl);
-        angle += 5.0f;
+        angle += 3.0f;
     }
 
     @Override
