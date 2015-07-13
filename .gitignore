@@ -6,3 +6,4 @@ ARTDemo*
 .DS_Store
 /build
 /captures
+aRBaseLib/build/*
