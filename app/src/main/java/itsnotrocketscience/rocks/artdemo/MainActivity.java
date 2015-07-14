@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import itsnotrocketscience.rocks.artdemo.cube.ARSimpleInteraction;
+import itsnotrocketscience.rocks.artdemo.cube.ARSimpleInteractionActivity;
 import itsnotrocketscience.rocks.artdemo.sphere.SphereActivity;
 
 
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 break;
             case R.id.btnCube:
-                intent = new Intent(MainActivity.this, ARSimpleInteraction.class);
+                intent = new Intent(MainActivity.this, ARSimpleInteractionActivity.class);
                 startActivity(intent);
                 break;
         }

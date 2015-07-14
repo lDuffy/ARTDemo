@@ -62,7 +62,7 @@ import itsnotrocketscience.rocks.artdemo.R;
 /**
  * Another simple example that includes a small amount of user interaction.
  */
-public class ARSimpleInteraction extends ARActivity {
+public class ARSimpleInteractionActivity extends ARActivity {
 
 	/**
 	 * A custom renderer is used to produce a new visual experience.
