@@ -1,4 +1,4 @@
-package itsnotrocketscience.rocks.artdemo;
+package itsnotrocketscience.rocks.artdemo.demo;
 
 import android.opengl.GLU;
 
@@ -43,8 +43,7 @@ public class DemoRenderer extends ARRenderer {
     public boolean configureARScene() {
 
         markerID = ARToolKit.getInstance().addMarker("single;Data/alien.pat;80");
-        if (markerID < 0) return false;
-        return true;
+        return markerID >= 0;
 
     }
 

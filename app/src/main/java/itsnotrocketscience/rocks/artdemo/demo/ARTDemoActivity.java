@@ -1,10 +1,12 @@
-package itsnotrocketscience.rocks.artdemo;
+package itsnotrocketscience.rocks.artdemo.demo;
 
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
 import org.artoolkit.ar.base.ARActivity;
 import org.artoolkit.ar.base.rendering.ARRenderer;
+
+import itsnotrocketscience.rocks.artdemo.R;
 
 /**
  * Created by Liam on 10/07/2015.
