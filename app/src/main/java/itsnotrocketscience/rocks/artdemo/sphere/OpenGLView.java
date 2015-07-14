@@ -13,11 +13,10 @@ import android.view.MotionEvent;
  */
 public class OpenGLView extends GLSurfaceView {
 
-    private OpenGLRenderer4 mRenderer;
     public OpenGLView(Context context) {
         super(context);
 
-        mRenderer = new OpenGLRenderer4();
+        OpenGLRenderer4 mRenderer = new OpenGLRenderer4();
         this.setRenderer(mRenderer);
     }
 }
