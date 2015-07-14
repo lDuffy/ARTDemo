@@ -38,11 +38,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".square.OpenGLES20Activity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="@string/demo">
-        </activity>
-        <activity
             android:name=".ARTDemoActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/demo">
@@ -53,7 +48,7 @@
             android:label="@string/demo">
         </activity>
         <activity
-            android:name=".cube.ARSimpleInteraction"
+            android:name=".cube.ARSimpleInteractionActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/demo">
         </activity>
