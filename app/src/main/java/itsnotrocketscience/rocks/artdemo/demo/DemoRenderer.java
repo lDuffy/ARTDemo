@@ -42,7 +42,7 @@ public class DemoRenderer extends ARRenderer {
     @Override
     public boolean configureARScene() {
 
-        markerID = ARToolKit.getInstance().addMarker("single;Data/alien.pat;80");
+        markerID = ARToolKit.getInstance().addMarker("single;Data/patt.alien;80");
         return markerID >= 0;
 
     }
